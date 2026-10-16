@@ -1,6 +1,6 @@
 # Awesome Humans
 
-A modern take on curated awesome-\* lists for coding agents: distilled guidance, thanks to awesome humans.
+An agentic take on curated awesome-\* lists: distilled guidance, thanks to awesome humans.
 
 Each opinion states its recommendation first, then the rationale, then its sources, and targets the latest released versions. Every source is a named, vetted human or publication on the ecosystem's roster, and every opinion cites the ones it rests on.
 
