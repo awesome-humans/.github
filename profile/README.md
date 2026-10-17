@@ -14,14 +14,18 @@ Each opinion states its recommendation first, then the rationale, then its sourc
 
 [awesome-humans/website](https://github.com/awesome-humans/website) builds and publishes [awesome-humans.net](https://awesome-humans.net) from every live ecosystem.
 
-## Use it
+## Usage
 
-- **Point an agent at it.** Tell your agent: "Follow the conventions in <https://awesome-humans.net/llms.txt> when you write code." The root `llms.txt` links to each ecosystem's own.
-- **Scaffold from it.** Each ecosystem repository has copy-paste-ready templates, and agent skills that check a project against the opinions.
-- **Read it.** Browse [awesome-humans.net](https://awesome-humans.net), or each repository on GitHub.
+- **Point your agent at it.** Tell your coding agent to follow the opinions when it writes code, such as "Follow the conventions at awesome-humans.net when writing .NET code". The site's [`llms.txt`](https://awesome-humans.net/llms.txt) links to each ecosystem's own.
+- **Check an existing project.** Ask your coding agent to run [`verify-project`](https://awesome-humans.net/dotnet/skills/verify-project/), such as "Use the verify project skill at awesome-humans.net against <repo>". To narrow the review, say so in the request, such as "focus on testing".
+- **Start a project from the templates.** Copy the [.NET templates](https://awesome-humans.net/dotnet/templates/) into a new project, and trim what you don't need.
+- **Read the opinions.** Each page on [awesome-humans.net](https://awesome-humans.net) gives the recommendation, the rationale, and the sources behind it.
 
 ## Contribute
 
-- **Propose an opinion** with a pull request in the ecosystem's repository. The pull request template asks where it comes from: a source on the roster, a candidate source, or your own experience.
-- **Suggest a source, or ask to be removed** from a roster, by opening an issue in the ecosystem's repository.
+- **Propose an opinion** with a pull request in the ecosystem's repository. Its [opinion template](https://github.com/awesome-humans/.github/blob/main/PULL_REQUEST_TEMPLATE/opinion.md) asks where the opinion comes from: a source on the roster, a candidate source, or your own experience.
+- **Suggest a source.** Know a person or publication with at least two years of accurate, independent writing about an ecosystem we cover? [Suggest them for vetting](https://github.com/awesome-humans/website/issues/new?template=suggest-source.yml).
+- **Opt out.** If you're a listed source and don't want your work cited, [ask to opt out](https://github.com/awesome-humans/website/issues/new?template=opt-out.yml), or email <contact@awesome-humans.net> if you'd rather not ask in public. Citations of your work go within 30 days.
 - **Report a security problem** privately, as the [security policy](https://github.com/awesome-humans/.github/blob/main/SECURITY.md) describes.
+
+For how suggestions and opt-outs are handled, see [Want in or out?](https://awesome-humans.net/want-in-or-out/)
