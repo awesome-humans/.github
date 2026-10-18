@@ -30,5 +30,5 @@ Each stub, `TODO`, or follow-up the run left, and where it is.
 
 - [ ] `targets:` and `last-reviewed:` are updated on every file changed or verified unchanged.
 - [ ] No preview or release candidate is a target. Previews go in "Coming next" notes.
-- [ ] No house content is removed, weakened, or unmarked.
+- [ ] No house block or region is removed, weakened, or unmarked.
 - [ ] `npm run check` passes.
