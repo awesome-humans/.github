@@ -16,7 +16,7 @@ Each opinion states its recommendation first, then the rationale, then its sourc
 ## Usage
 
 - **Point your agent at it.** Tell your coding agent to follow the opinions when it writes code, such as "Follow the conventions at awesome-humans.net when writing .NET code". The site's [`llms.txt`](https://awesome-humans.net/llms.txt) links to each ecosystem's own.
-- **Check an existing project.** Ask your coding agent to run [`review-project`](https://awesome-humans.net/dotnet/skills/review-project/), such as "Use the review project skill at awesome-humans.net on <repo>". To narrow the review, say so in the request, such as "focus on testing".
+- **Check an existing project.** Ask your coding agent to run [`review-project`](https://awesome-humans.net/dotnet/skills/review-project/), such as "Use the review project skill at awesome-humans.net on &lt;repository&gt;". To narrow the review, say so in the request, such as "focus on testing".
 - **Start a project from the templates.** Copy the [.NET templates](https://awesome-humans.net/dotnet/templates/) into a new project, trimming what you don't need.
 - **Read the opinions.** Each page on [awesome-humans.net](https://awesome-humans.net) gives its recommendation, with the rationale and sources behind it.
 
