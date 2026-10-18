@@ -12,7 +12,7 @@
 
 - [ ] **Sourced:** It traces to a vetted source in the repository's `AWESOME-HUMANS.md` roster. Source IDs and links:
 - [ ] **Candidate source:** It traces to a source that isn't on the roster yet. The source must pass the `vet-source` skill before the opinion can merge. Source and evidence of its track record:
-- [ ] **Experience-based:** It comes from my own practice, with no published source. If the owner accepts it, they **adopt** it as a house opinion and take responsibility for it, as the repository's `HOUSE-OPINIONS.md` describes, and the Woven table credits this pull request and its author.
+- [ ] **Experience-based:** It comes from my own practice, with no published source. If the owner accepts it, they **adopt** it into their house profile and take responsibility for it, as the repository's `HOUSE-OPINIONS.md` describes, and the Woven table credits this pull request and its author.
 
 ## Skill run
 
@@ -32,4 +32,4 @@
 - [ ] Every new, renamed, or removed `opinions/` file is indexed in `README.md`, with a linked **Scope** bullet and a **Repository layout** entry, each in order, and no stale entries. CI checks this.
 - [ ] `npm run check` passes. It checks formatting, lint, and spelling at the versions pinned in `package.json`.
 - [ ] No preview feature is stated as an opinion. Previews go in "Coming next" notes.
-- [ ] No house content is removed, weakened, or unmarked.
+- [ ] No house block or region is removed, weakened, or unmarked.
