@@ -6,11 +6,10 @@ Each opinion states its recommendation first, then the rationale, then its sourc
 
 ## Ecosystems
 
-| Ecosystem  | Repository                                                        | Status                                                                  |
-| ---------- | ----------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| .NET       | [awesome-humans/dotnet](https://github.com/awesome-humans/dotnet) | Live at [awesome-humans.net/dotnet](https://awesome-humans.net/dotnet/) |
-| Rust       | [awesome-humans/rust](https://github.com/awesome-humans/rust)     | Coming soon                                                             |
-| TypeScript | Not created yet                                                   | Planned                                                                 |
+| Ecosystem | Repository                                                        | Status                                                                  |
+| --------- | ----------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| .NET      | [awesome-humans/dotnet](https://github.com/awesome-humans/dotnet) | Live at [awesome-humans.net/dotnet](https://awesome-humans.net/dotnet/) |
+| Rust      | [awesome-humans/rust](https://github.com/awesome-humans/rust)     | Coming soon                                                             |
 
 [awesome-humans/website](https://github.com/awesome-humans/website) builds and publishes [awesome-humans.net](https://awesome-humans.net) from every live ecosystem.
 
