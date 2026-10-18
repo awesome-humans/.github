@@ -1,0 +1,14 @@
+name: Attribution
+
+# This repository calls its own reusable workflow, as every other repository does.
+on:
+  pull_request:
+    types: [opened, edited, reopened, synchronize]
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  attribution:
+    uses: ./.github/workflows/attribution.yml

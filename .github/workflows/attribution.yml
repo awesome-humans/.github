@@ -1,0 +1,71 @@
+name: Attribution
+
+# Every repository in the organisation calls this workflow on its pull requests,
+# so the "no agent attribution in history" rule is checked in one place. A pull
+# request squash-merges under its title and description, and GitHub appends a
+# Co-authored-by line for each co-author trailer on a branch commit, so the check
+# reads all three: the title, the description, and every commit on the branch.
+#
+# Caller, in each repository's .github/workflows/attribution.yml:
+#
+#   on:
+#     pull_request:
+#       types: [opened, edited, reopened, synchronize]
+#   permissions:
+#     contents: read
+#     pull-requests: read
+#   jobs:
+#     attribution:
+#       uses: awesome-humans/.github/.github/workflows/attribution.yml@<sha>
+#
+# The required status check is then "attribution / check".
+
+on:
+  workflow_call:
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      # The description is read from the API, not the event payload, so a re-run
+      # after an edit checks the current text.
+      - name: Check the title, description, and commits
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          PR: ${{ github.event.pull_request.number }}
+        run: |
+          set -euo pipefail
+          # A co-author trailer naming an agent or its vendor, and the "Generated with"
+          # footer that agent harnesses append. Bots such as Renovate author their own
+          # pull requests, which isn't agent attribution, so a [bot] identity passes.
+          pattern='^co-authored-by:.*(claude|anthropic|copilot|openai|codex|cursor|gemini|devin)|generated with \[?(claude|copilot|codex|cursor|gemini)'
+          found=0
+
+          gh api "repos/$REPO/pulls/$PR" --jq '.title, (.body // "")' > pr.txt
+          if grep -inE "$pattern" pr.txt; then
+            echo "::error::The pull request title or description carries agent attribution. Remove it, because it becomes the squash commit."
+            found=1
+          fi
+
+          gh api --paginate "repos/$REPO/pulls/$PR/commits" \
+            --jq '.[] | "\(.sha[0:7])\t\(.commit.author.email)\t\(.commit.message | gsub("\n"; "\u001f"))"' > commits.txt
+          while IFS=$'\t' read -r sha email message; do
+            if grep -qiE 'noreply@anthropic\.com' <<< "$email"; then
+              echo "::error::Commit $sha is authored by $email. Commit under the author's git identity."
+              found=1
+            fi
+            if tr '\037' '\n' <<< "$message" | grep -inE "$pattern"; then
+              echo "::error::Commit $sha carries agent attribution. Reword it without the trailer or footer, and force-push the branch."
+              found=1
+            fi
+          done < commits.txt
+
+          if [ "$found" -eq 0 ]; then
+            echo "No agent attribution in the title, description, or $(wc -l < commits.txt) commits."
+          fi
+          exit "$found"
