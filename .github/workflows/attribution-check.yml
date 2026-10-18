@@ -1,8 +1,10 @@
 name: Attribution
 
 # This repository calls its own reusable workflow, as every other repository does.
+# pull_request_target runs the base branch's copy, so a pull request can't edit the
+# check it's held to. Nothing here checks out or runs the pull request's code.
 on:
-  pull_request:
+  pull_request_target:
     types: [opened, edited, reopened, synchronize]
 
 permissions:

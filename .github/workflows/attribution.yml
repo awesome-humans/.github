@@ -9,7 +9,7 @@ name: Attribution
 # Caller, in each repository's .github/workflows/attribution.yml:
 #
 #   on:
-#     pull_request:
+#     pull_request_target:
 #       types: [opened, edited, reopened, synchronize]
 #   permissions:
 #     contents: read
@@ -18,7 +18,11 @@ name: Attribution
 #     attribution:
 #       uses: awesome-humans/.github/.github/workflows/attribution.yml@<sha>
 #
-# The required status check is then "attribution / check".
+# The required status check is then "attribution / check". The caller uses
+# pull_request_target, not pull_request, so it runs the base branch's copy of the
+# caller and a pull request can't edit the check it's held to. That's safe because
+# this job never checks out or runs the pull request's code, and it reads the
+# description through the API into a file, never into the shell.
 
 on:
   workflow_call:
