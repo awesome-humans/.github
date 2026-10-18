@@ -1,6 +1,6 @@
 # Awesome Humans
 
-An agentic take on awesome lists ([awesome-dotnet](https://github.com/quozd/awesome-dotnet), [awesome-rust](https://github.com/rust-unofficial/awesome-rust)): distilled guidance, thanks to awesome humans.
+An agentic take on awesome lists ([awesome-dotnet](https://github.com/quozd/awesome-dotnet), [awesome-rust](https://github.com/rust-unofficial/awesome-rust)): distilled, opinionated guidance, thanks to awesome humans.
 
 Each opinion states its recommendation first, then the rationale, then its sources, and targets the latest released versions. Every source is a named, vetted human or publication on the ecosystem's roster, and every opinion cites the ones it rests on.
 
@@ -18,8 +18,8 @@ Each opinion states its recommendation first, then the rationale, then its sourc
 
 - **Point your agent at it.** Tell your coding agent to follow the opinions when it writes code, such as "Follow the conventions at awesome-humans.net when writing .NET code". The site's [`llms.txt`](https://awesome-humans.net/llms.txt) links to each ecosystem's own.
 - **Check an existing project.** Ask your coding agent to run [`verify-project`](https://awesome-humans.net/dotnet/skills/verify-project/), such as "Use the verify project skill at awesome-humans.net on <repo>". To narrow the review, say so in the request, such as "focus on testing".
-- **Start a project from the templates.** Copy the [.NET templates](https://awesome-humans.net/dotnet/templates/) into a new project, and trim what you don't need.
-- **Read the opinions.** Each page on [awesome-humans.net](https://awesome-humans.net) gives the recommendation, the rationale, and the sources behind it.
+- **Start a project from the templates.** Copy the [.NET templates](https://awesome-humans.net/dotnet/templates/) into a new project, trimming what you don't need.
+- **Read the opinions.** Each page on [awesome-humans.net](https://awesome-humans.net) gives its recommendation, with the rationale and sources behind it.
 
 ## Contribute
 
