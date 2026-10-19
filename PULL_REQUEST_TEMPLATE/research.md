@@ -1,4 +1,6 @@
-<!-- Saves a `research-topic` topic. Title the pull request `research: <topic>`. Fill in every section. If a section doesn't apply, write "Doesn't apply" and the reason, instead of deleting it. -->
+<!-- This description becomes the squash commit's message, so write it as Writing style: Commit messages and pull requests describes, and delete this comment: https://awesome-humans.net/conventions/writing-style/#commit-messages-and-pull-requests
+
+     Saves a `research-topic` topic. Title the pull request `research: <topic>`. Replace the text after each label. If a section doesn't apply, write "Doesn't apply" and the reason, instead of deleting it. -->
 
 ## Question
 
@@ -10,11 +12,7 @@ The recommendation, in one or two sentences, and its maturity: GA, or preview wi
 
 ## Sources
 
-| Claim | Source | On the roster |
-| ----- | ------ | ------------- |
-|       |        |               |
-
-<!-- On the roster: citable (its roster ID), watch-list, or not on the roster. Only citable claims can be promoted. -->
+One line per claim, as `- <claim>: <source> (<standing>)`. The standing is citable, with its roster ID, watch-list, or not on the roster. Only citable claims can be promoted. The topic file holds the full evidence.
 
 ## For `resolve-research`
 
@@ -24,7 +22,6 @@ The recommendation, in one or two sentences, and its maturity: GA, or preview wi
 
 **Blockers:** each claim that needs `vet-source` or a GA release first.
 
-## Checklist
+## Checked
 
-- [ ] The topic has the metadata a topic carries, as `AGENTS.md: Metadata` defines.
-- [ ] `npm run check` passes.
+That the topic has the metadata a topic carries, as `AGENTS.md: Metadata` defines, and that `just check` passes.

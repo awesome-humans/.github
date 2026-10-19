@@ -1,35 +1,33 @@
-<!-- Fill in every section. If a section doesn't apply, write "Doesn't apply" and the reason, instead of deleting it. -->
+<!-- This description becomes the squash commit's message, so write it as Writing style: Commit messages and pull requests describes, and delete this comment: https://awesome-humans.net/conventions/writing-style/#commit-messages-and-pull-requests
+
+     Replace the text after each label. If a section doesn't apply, write "Doesn't apply" and the reason, instead of deleting it. End with a `Closes: #<number>` or `Refs: #<number>` trailer for each related issue. -->
 
 ## Proposed opinion
 
-**Opinion (one sentence, one recommendation):**
+**Opinion:** one sentence, with one recommendation.
 
-**Why (the reasoning, the trade-offs, and what it replaces):**
+**Why:** the reasoning, the trade-offs, and what it replaces.
 
-**Where it belongs (an `opinions/` or `templates/` file):**
+**Where it belongs:** the `opinions/` or `templates/` file, and the section in it.
 
-## Provenance: pick one
+## Provenance
 
-- [ ] **Sourced:** It traces to a vetted source in the repository's `AWESOME-HUMANS.md` roster. Source IDs and links:
-- [ ] **Candidate source:** It traces to a source that isn't on the roster yet. The source must pass the `vet-source` skill before the opinion can merge. Source and evidence of its track record:
-- [ ] **Experience-based:** It comes from my own practice, with no published source. If the owner accepts it, they **adopt** it into their house profile and take responsibility for it, as the repository's `HOUSE-OPINIONS.md` describes, and the Woven table credits this pull request and its author.
+Keep the one that applies, and delete the other two.
+
+- **Sourced:** it traces to a vetted source on the repository's `AWESOME-HUMANS.md` roster. The roster IDs, and a reference-style link to each post.
+- **Candidate source:** it traces to a source that isn't on the roster yet, which must pass `vet-source` before the opinion can merge. The source, and the evidence of its track record.
+- **Experience-based:** it comes from your own practice, with no published source. If the owner accepts it, they adopt it into their house profile and take responsibility for it, as the repository's `HOUSE-OPINIONS.md` describes, and the Woven table credits this pull request and its author.
 
 ## Skill run
 
-<!-- A person proposing an opinion writes "Doesn't apply". -->
+A person proposing an opinion writes "Doesn't apply".
 
 **Skill:** `harvest-sources` or `resolve-research`.
 
-**`harvest-sources`:** The sweep window. For each source, the posts read and what each changed, or "nothing notable". Where vetted sources disagree, both positions and the one chosen. `Closes #<number>` for the `Harvest due` issue.
+**`harvest-sources`:** the sweep window. For each source, the posts read and what each changed, or "nothing notable". Where vetted sources disagree, both positions and the one chosen. A `Closes: #<number>` trailer for the `Harvest due` issue.
 
-**`resolve-research`:** The `research/` topic, and whether it's promoted, partly promoted, or discarded. For each claim the recommendation rests on, the roster ID behind it, or why it was dropped or held.
+**`resolve-research`:** the `research/` topic, and whether it's promoted, partly promoted, or discarded. For each claim the recommendation rests on, the roster ID behind it, or why it was dropped or held.
 
-## Checklist
+## Checked
 
-- [ ] The opinion comes first: the recommendation in the first sentence, then the rationale, then the sources. For details, see the repository's `AGENTS.md`.
-- [ ] Code examples compile against the declared `targets:`. State the toolchain version you built with.
-- [ ] Every `opinions/`, `research/`, or `templates/` file you changed has complete metadata, as `AGENTS.md: Metadata` defines. CI checks this.
-- [ ] Every new, renamed, or removed `opinions/` file is indexed in `README.md`, with a linked **Scope** bullet and a **Repository layout** entry, each in order, and no stale entries. CI checks this.
-- [ ] `npm run check` passes. It checks formatting, lint, and spelling at the versions pinned in `package.json`.
-- [ ] No preview feature is stated as an opinion. Previews go in "Coming next" notes.
-- [ ] No house block or region is removed, weakened, or unmarked.
+The toolchain version the code examples compile with, against the declared `targets:`, and that `just check` passes. Say so if the opinion names a preview feature, which belongs in a "Coming next" note, or changes a house block or region.
