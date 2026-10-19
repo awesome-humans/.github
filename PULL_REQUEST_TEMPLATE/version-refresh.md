@@ -1,16 +1,16 @@
-<!-- Records a `refresh-<ecosystem>-versions` run. Fill in every section. If a section doesn't apply, write "Doesn't apply" and the reason, instead of deleting it. -->
+<!-- This description becomes the squash commit's message, so write it as Writing style: Commit messages and pull requests describes, and delete this comment: https://awesome-humans.net/conventions/writing-style/#commit-messages-and-pull-requests
+
+     Records a `refresh-<ecosystem>-versions` run. Replace the text after each label. If a section doesn't apply, write "Doesn't apply" and the reason, instead of deleting it. -->
 
 ## Versions
 
-| What                      | Before | After |
-| ------------------------- | ------ | ----- |
-| Framework or runtime      |        |       |
-| Language                  |        |       |
-| Toolchain band or minimum |        |       |
+Write each as `<before> to <after>`, or "unchanged".
 
-**Package pins:** each pin that changed, with its version before and after. Then the date the pins were verified against the registry, which changes even when no pin does.
-
-**Why a minimum moved:** the feature the repository needs from the new band, for each toolchain minimum raised.
+- **Framework or runtime:** the versions.
+- **Language:** the versions.
+- **Toolchain band or minimum:** the versions.
+- **Package pins:** each pin that changed, with its version before and after. Then the date the pins were verified against the registry, which changes even when no pin does.
+- **Why a minimum moved:** the feature the repository needs from the new band, for each toolchain minimum raised.
 
 ## Opinions
 
@@ -26,9 +26,6 @@
 
 Each stub, `TODO`, or follow-up the run left, and where it is.
 
-## Checklist
+## Checked
 
-- [ ] `targets:` and `last-reviewed:` are updated on every file changed or verified unchanged.
-- [ ] No preview or release candidate is a target. Previews go in "Coming next" notes.
-- [ ] No house block or region is removed, weakened, or unmarked.
-- [ ] `npm run check` passes.
+That `targets:` and `last-reviewed:` are updated on every file changed or verified unchanged, and that `just check` passes. Say so if a target is a preview or release candidate, which belongs in a "Coming next" note, or if the run changes a house block or region.
