@@ -6,6 +6,12 @@ name: Attribution
 # Co-authored-by line for each co-author trailer on a branch commit, so the check
 # reads all three: the title, the description, and every commit on the branch.
 #
+# The same job checks that the title and description read well as a commit, as
+# Writing style: Commit messages and pull requests describes. GitHub wraps the body
+# at 72 characters, which breaks a table row or an inline link, and keeps HTML
+# comments and checkboxes as they are. Bots, such as Renovate, write their own
+# descriptions, so they skip that step.
+#
 # Caller, in each repository's .github/workflows/attribution.yml:
 #
 #   on:
@@ -71,5 +77,50 @@ jobs:
 
           if [ "$found" -eq 0 ]; then
             echo "No agent attribution in the title, description, or $(wc -l < commits.txt) commits."
+          fi
+          exit "$found"
+
+      # Runs even when the attribution step fails, so one run reports both.
+      - name: Check the title and description read as a commit
+        if: ${{ !cancelled() }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          PR: ${{ github.event.pull_request.number }}
+        run: |
+          set -euo pipefail
+          gh api "repos/$REPO/pulls/$PR" > pr.json
+          if [ "$(jq -r '.user.type' pr.json)" = "Bot" ]; then
+            echo "A bot opened this pull request, so its description isn't checked."
+            exit 0
+          fi
+          found=0
+
+          # GitHub appends " (#<number>)" to the subject when it squashes.
+          title=$(jq -r '.title' pr.json)
+          length=$(( ${#title} + ${#PR} + 4 ))
+          if [ "$length" -gt 72 ]; then
+            echo "::error::The title is $length characters as a commit subject, counting \" (#$PR)\". Shorten it to 72 or fewer."
+            found=1
+          fi
+
+          # Fenced code blocks and inline code are left out, so a description can
+          # show Markdown it's writing about.
+          jq -r '.body // ""' pr.json | tr -d '\r' \
+            | awk '/^ *(```|~~~)/ { fenced = !fenced; next } !fenced' \
+            | sed 's/`[^`]*`//g' > body.txt
+          check() {
+            if grep -nE "$1" body.txt; then
+              echo "::error::The description has $2. $3"
+              found=1
+            fi
+          }
+          check '<!--' "an HTML comment" "Delete the template's guidance comment, because it would become part of the commit."
+          check '^ *\|.*\|' "a table" "GitHub wraps a table row across lines in the commit. Use a list of **Label:** lines instead."
+          check '^ *[-*+] \[[ xX]\]' "a checkbox" "Say what you checked in a sentence instead."
+          check '\]\([^)]*\)' "an inline link" "GitHub can wrap a link across lines in the commit. Use an issue reference such as #93, or a reference-style link, [text][1], with [1]: <url> on its own line."
+
+          if [ "$found" -eq 0 ]; then
+            echo "The title and description read as a commit."
           fi
           exit "$found"
