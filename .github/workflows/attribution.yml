@@ -107,7 +107,14 @@ jobs:
           # Fenced code blocks and inline code are left out, so a description can
           # show Markdown it's writing about.
           jq -r '.body // ""' pr.json | tr -d '\r' \
-            | awk '/^ *(```|~~~)/ { fenced = !fenced; next } !fenced' \
+            | awk '
+                # A fence closes only on a run of the same character, at least as long.
+                match($0, /^ *(```+|~~~+)/) {
+                  run = substr($0, RSTART, RLENGTH); sub(/^ +/, "", run)
+                  if (!fence) { fence = run; next }
+                  if (substr(run, 1, 1) == substr(fence, 1, 1) && length(run) >= length(fence) && $0 ~ /^ *[`~]+ *$/) { fence = ""; next }
+                }
+                !fence' \
             | sed 's/`[^`]*`//g' > body.txt
           check() {
             if grep -nE "$1" body.txt; then
@@ -116,8 +123,9 @@ jobs:
             fi
           }
           check '<!--' "an HTML comment" "Delete the template's guidance comment, because it would become part of the commit."
-          check '^ *\|.*\|' "a table" "GitHub wraps a table row across lines in the commit. Use a list of **Label:** lines instead."
-          check '^ *[-*+] \[[ xX]\]' "a checkbox" "Say what you checked in a sentence instead."
+          # A table's delimiter row, such as |---|:--:| or --- | ---, with or without outer pipes.
+          check '^ *\|?( *:?-+:? *\|)+ *:?-+:? *\|? *$|^ *\|.*\|' "a table" "GitHub wraps a table row across lines in the commit. Use a list of **Label:** lines instead."
+          check '^ *([-*+]|[0-9]+[.)]) \[[ xX]\]' "a checkbox" "Say what you checked in a sentence instead."
           check '\]\([^)]*\)' "an inline link" "GitHub can wrap a link across lines in the commit. Use an issue reference such as #93, or a reference-style link, [text][1], with [1]: <url> on its own line."
 
           if [ "$found" -eq 0 ]; then
