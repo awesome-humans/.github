@@ -2,22 +2,22 @@
 
 An agentic take on awesome lists ([awesome-dotnet](https://github.com/quozd/awesome-dotnet), [awesome-rust](https://github.com/rust-unofficial/awesome-rust)): distilled, opinionated guidance, thanks to awesome humans.
 
-Each opinion states its recommendation first, then the rationale, then its sources, and targets the latest released versions. Every source is a named, vetted human or publication on the ecosystem's roster, and every opinion cites the ones it rests on.
+Every opinion states its recommendation first and targets the latest released versions. Every source is a named, vetted human or publication on the ecosystem's roster, and every opinion cites the ones it rests on.
 
 ## Ecosystems
 
 | Ecosystem | Repository                                                        | Status                                                                  |
 | --------- | ----------------------------------------------------------------- | ----------------------------------------------------------------------- |
 | .NET      | [awesome-humans/dotnet](https://github.com/awesome-humans/dotnet) | Live at [awesome-humans.net/dotnet](https://awesome-humans.net/dotnet/) |
-| Rust      | [awesome-humans/rust](https://github.com/awesome-humans/rust)     | Coming soon                                                             |
+| Rust      | [awesome-humans/rust](https://github.com/awesome-humans/rust)     | Live at [awesome-humans.net/rust](https://awesome-humans.net/rust/)     |
 
 [awesome-humans/website](https://github.com/awesome-humans/website) builds and publishes [awesome-humans.net](https://awesome-humans.net) from every live ecosystem.
 
 ## Usage
 
-- **Point your agent at it.** Tell your coding agent to follow the opinions when it writes code, such as "Follow the conventions at awesome-humans.net when writing .NET code". The site's [`llms.txt`](https://awesome-humans.net/llms.txt) links to each ecosystem's own.
-- **Check an existing project.** Ask your coding agent to run [`review-project`](https://awesome-humans.net/dotnet/skills/review-project/), such as "Use the review project skill at awesome-humans.net on &lt;repository&gt;". To narrow the review, say what to include or leave out, such as "focus on testing, skip CI".
-- **Start a project from the templates.** Copy the [.NET templates](https://awesome-humans.net/dotnet/templates/) into a new project, trimming what you don't need.
+- **Point your agent at it.** Tell your coding agent to follow the opinions when it writes code, such as "Follow the conventions at awesome-humans.net when writing &lt;language&gt; code". The site's [`llms.txt`](https://awesome-humans.net/llms.txt) links to each ecosystem's own.
+- **Check an existing project.** Ask your coding agent to run `review-project` for [.NET](https://awesome-humans.net/dotnet/skills/review-project/) or [Rust](https://awesome-humans.net/rust/skills/review-project/), such as "Use the review project skill at awesome-humans.net on &lt;repository&gt;". To narrow the review, say what to include or leave out, such as "focus on testing, skip CI".
+- **Start a project from the templates.** Copy the [.NET templates](https://awesome-humans.net/dotnet/templates/) or [Rust templates](https://awesome-humans.net/rust/templates/) into a new project, trimming what you don't need.
 - **Read the opinions.** Each page on [awesome-humans.net](https://awesome-humans.net) gives its recommendation, with the rationale and sources behind it.
 
 ## Contribute
