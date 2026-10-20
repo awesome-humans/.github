@@ -1,6 +1,6 @@
 # Awesome Humans
 
-An agentic take on awesome lists ([awesome-dotnet](https://github.com/quozd/awesome-dotnet), [awesome-rust](https://github.com/rust-unofficial/awesome-rust)): distilled, opinionated guidance, thanks to awesome humans.
+An agentic take on awesome lists (such as [awesome-dotnet](https://github.com/quozd/awesome-dotnet) and [awesome-rust](https://github.com/rust-unofficial/awesome-rust)): distilled, opinionated guidance, thanks to awesome humans.
 
 Every opinion states its recommendation first and targets the latest released versions. Every source is a named, vetted human or publication on the ecosystem's roster, and every opinion cites the ones it rests on.
 
