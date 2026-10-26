@@ -29,5 +29,5 @@ That the topic has the metadata a topic carries, as `AGENTS.md: Metadata` define
 Then these three checks. For each, say what you ran, or write "Doesn't apply" and why.
 
 - **Code:** the toolchain or SDK, and the package versions, that every code example compiles with against the declared `targets:`.
-- **Advisories:** that each package the topic recommends has no open security advisory at the version it names, and the tool or advisory database you checked.
+- **Advisories:** whether each package the topic recommends has an open security advisory at the version it names, the tool or advisory database you checked, and each advisory you found.
 - **Claims:** that each claim the recommendation rests on has a citable roster source, or is marked in the topic as unsupported.

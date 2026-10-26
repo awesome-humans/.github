@@ -30,4 +30,4 @@ A person proposing an opinion writes "Doesn't apply".
 
 ## Checked
 
-The toolchain version the code examples compile with, against the declared `targets:`, and that `just check` passes. Say that each package the opinion recommends has no open security advisory at the version it names, and how you checked. Say so if the opinion names a preview feature, which belongs in a "Coming next" note, or changes a house block or region.
+The toolchain version the code examples compile with, against the declared `targets:`, and that `just check` passes. Say whether each package the opinion recommends has an open security advisory at the version it names, how you checked, and each advisory you found. Say so if the opinion names a preview feature, which belongs in a "Coming next" note, or changes a house block or region.
