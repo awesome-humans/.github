@@ -13,6 +13,7 @@ Reserve Important for these. Everything else is Nit at most.
 - **An ecosystem-specific line.** A toolchain name, path, or check that applies to only one ecosystem. Those stay in each repository's `AGENTS.md`.
 - **A weakened check.** A change to `attribution.yml` that lets a `Co-authored-by` trailer or a "Generated with" line through, or that runs the pull request's code under `pull_request_target`.
 - **A wrong security route.** A change to `SECURITY.md` that removes private vulnerability reporting or the `contact@awesome-humans.net` fallback.
+- **A loosened review.** A change to this file that drops an Important item, raises the nit cap, or skips a class of finding, without saying why. The agent reviewer can read it from the pull request itself, so the change would soften its own review.
 
 ## Cap the nits
 
