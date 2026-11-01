@@ -2,7 +2,7 @@
 
 These instructions guide automated pull request reviews in this repository. The agent reviewer (currently CodeRabbit) reads them, and so can any other agent asked to review a pull request here.
 
-This repository holds the organisation's defaults: the pull request templates, `SECURITY.md`, the organisation profile, and the `Attribution` workflow that every repository calls. A change here reaches every repository at once, so a finding matters when it would break another repository's pull requests or misdirect a contributor.
+This repository contains the organisation's defaults: the pull request templates, `SECURITY.md`, the organisation profile, and the `Attribution` workflow that every repository calls. A change here reaches every repository at once, so a finding matters when it would break another repository's pull requests or misdirect a contributor.
 
 ## What Important means here
 
