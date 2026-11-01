@@ -1,0 +1,33 @@
+name: zizmor
+
+# Audits the workflows for security problems. Every repository in the organisation
+# calls attribution.yml under pull_request_target, so a weakened workflow here
+# reaches all of them. Configured in .github/zizmor.yml.
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/**"
+      - ".github/zizmor.yml"
+      - ".github/requirements.txt"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+
+      - uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2 # v10.3.3
+
+      # zizmor runs at the version .github/requirements.txt pins. The token lets its
+      # online audits look up the actions the workflows pin, for known vulnerabilities
+      # and for commits that aren't on the action's repository.
+      - name: Audit the workflows
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: uvx --with-requirements .github/requirements.txt zizmor .github/workflows
