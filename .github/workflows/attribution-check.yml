@@ -4,7 +4,7 @@ name: Attribution
 # pull_request_target runs the base branch's copy, so a pull request can't edit the
 # check it's held to. Nothing here checks out or runs the pull request's code.
 on:
-  pull_request_target:
+  pull_request_target: # zizmor: ignore[dangerous-triggers] the job never checks out the pull request
     types: [opened, edited, reopened, synchronize]
 
 permissions:
@@ -13,4 +13,6 @@ permissions:
 
 jobs:
   attribution:
-    uses: ./.github/workflows/attribution.yml
+    # zizmor's self-repository audit asks for the $/ form, which GitHub added in July
+    # 2026. actionlint 1.7.12 rejects that form, so keep ./ until it accepts it.
+    uses: ./.github/workflows/attribution.yml # zizmor: ignore[self-repository]
