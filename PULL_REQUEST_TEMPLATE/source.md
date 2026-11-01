@@ -29,7 +29,7 @@ The row added to the decision log: the decision and the fact behind it, in two s
 
 ## Demotion
 
-A demotion is finished only when no opinion cites the source. For each claim that cited it, the file, and whether it was re-sourced, from which roster ID, or dropped.
+A demotion is finished only when no opinion cites the source. For each claim that cited it: the file, and the roster ID it was re-sourced from, or "dropped".
 
 ## Checked
 

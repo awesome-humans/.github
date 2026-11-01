@@ -15,9 +15,9 @@ Every opinion states its recommendation first and targets the latest released ve
 
 ## Usage
 
-- **Point your agent at it.** Tell your coding agent to follow the opinions when it writes code, such as "Follow the conventions at awesome-humans.net when writing &lt;language&gt; code". The site's [`llms.txt`](https://awesome-humans.net/llms.txt) links to each ecosystem's own.
-- **Check an existing project.** Ask your coding agent to run `review-project` for [.NET](https://awesome-humans.net/dotnet/skills/review-project/) or [Rust](https://awesome-humans.net/rust/skills/review-project/), such as "Use the review project skill at awesome-humans.net on &lt;repository&gt;". To narrow the review, say what to include or leave out, such as "focus on testing, skip CI".
-- **Start a project from the templates.** Copy the [.NET templates](https://awesome-humans.net/dotnet/templates/) or [Rust templates](https://awesome-humans.net/rust/templates/) into a new project, trimming what you don't need.
+- **Point your agent at it.** Tell your coding agent to follow the opinions when it writes code, for example: "Follow the conventions at awesome-humans.net when writing &lt;language&gt; code". The site's [`llms.txt`](https://awesome-humans.net/llms.txt) links to each ecosystem's own.
+- **Check an existing project.** Ask your coding agent to run `review-project` for [.NET](https://awesome-humans.net/dotnet/skills/review-project/) or [Rust](https://awesome-humans.net/rust/skills/review-project/), for example: "Use the review project skill at awesome-humans.net on &lt;repository&gt;". To narrow the review, say what to include or leave out, such as "focus on testing, skip CI".
+- **Start a project from the templates.** Copy the [.NET templates](https://awesome-humans.net/dotnet/templates/) or [Rust templates](https://awesome-humans.net/rust/templates/) into a new project, and delete what you don't need.
 - **Read the opinions.** Each page on [awesome-humans.net](https://awesome-humans.net) gives its recommendation, with the rationale and sources behind it.
 
 ## Contribute

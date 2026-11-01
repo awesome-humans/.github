@@ -28,4 +28,4 @@ Each stub, `TODO`, or follow-up the run left, and where it is.
 
 ## Checked
 
-That `targets:` and `last-reviewed:` are updated on every file changed or verified unchanged, and that `just check` passes. Say so if a target is a preview or release candidate, which belongs in a "Coming next" note, or if the run changes a house block or region.
+That `targets:` and `last-reviewed:` are updated on every file changed or verified unchanged, and that `just check` passes. If a target is a preview or release candidate, which belongs in a "Coming next" note, or the run changes a house block or region, say so.
