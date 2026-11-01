@@ -1,7 +1,0 @@
-# Configuration for zizmor, which audits the workflows for security problems.
-# The zizmor workflow runs it on pull requests that change a workflow.
-rules:
-  # Asks for the $/ self-repository form of a local uses:, which GitHub added in
-  # July 2026. actionlint 1.7.12 rejects that form, so keep ./ until it accepts it.
-  self-repository:
-    disable: true
