@@ -1,8 +1,8 @@
 name: zizmor
 
 # Audits the workflows for security problems. Every repository in the organisation
-# calls attribution.yml under pull_request_target, so a weakened workflow here
-# reaches all of them. Configured in .github/zizmor.yml.
+# calls attribution.yml under pull_request_target, so a security flaw in it exposes
+# all of them. Configured in .github/zizmor.yml.
 on:
   pull_request:
     paths:
