@@ -1,4 +1,4 @@
-<!-- This description becomes the squash commit's message, so write it as Writing style: Commit messages and pull requests describes, and delete this comment: https://awesome-humans.net/conventions/writing-style/#commit-messages-and-pull-requests
+<!-- This description becomes the commit message. Follow Writing style: Commit messages and pull requests, then delete this comment: https://awesome-humans.net/conventions/writing-style/#commit-messages-and-pull-requests
 
      Records a `refresh-<ecosystem>-versions` run. Replace the text after each label. If a section doesn't apply, write "Doesn't apply" and the reason, instead of deleting it. -->
 
@@ -10,7 +10,7 @@ Write each as `<before> to <after>`, or "unchanged".
 - **Language:** the versions.
 - **Toolchain band or minimum:** the versions.
 - **Package pins:** each pin that changed, with its version before and after. Then the date the pins were verified against the registry, which changes even when no pin does.
-- **Why a minimum moved:** the feature the repository needs from the new band, for each toolchain minimum raised.
+- **Why a minimum moved:** for each toolchain minimum you raised, the feature the repository needs from the new band.
 
 ## Opinions
 

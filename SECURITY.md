@@ -1,6 +1,6 @@
 # Security policy
 
-This policy covers every repository in the [awesome-humans](https://github.com/awesome-humans) organisation, and the site they publish, [awesome-humans.net](https://awesome-humans.net). Only the `main` branch and the deployed site are supported.
+This policy covers every repository in the [awesome-humans](https://github.com/awesome-humans) organisation, and the website, [awesome-humans.net](https://awesome-humans.net). Only the `main` branch and the deployed website are supported.
 
 ## What to report privately
 
