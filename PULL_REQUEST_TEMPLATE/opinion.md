@@ -1,4 +1,4 @@
-<!-- This description becomes the squash commit's message, so write it as Writing style: Commit messages and pull requests describes, and delete this comment: https://awesome-humans.net/conventions/writing-style/#commit-messages-and-pull-requests
+<!-- This description becomes the commit message. Follow Writing style: Commit messages and pull requests, then delete this comment: https://awesome-humans.net/conventions/writing-style/#commit-messages-and-pull-requests
 
      Replace the text after each label. If a section doesn't apply, write "Doesn't apply" and the reason, instead of deleting it. End with a `Closes: #<number>` or `Refs: #<number>` trailer for each related issue. -->
 
@@ -30,4 +30,4 @@ A person proposing an opinion writes "Doesn't apply".
 
 ## Checked
 
-The toolchain version the code examples compile with, against the declared `targets:`, and that `just check` passes. Say whether each package the opinion recommends has an open security advisory at the version it names, how you checked, and each advisory you found. Say so if the opinion names a preview feature, which belongs in a "Coming next" note, or changes a house block or region.
+The toolchain version the code examples compile with, against the declared `targets:`, and that `just check` passes. Say whether each package the opinion recommends has an open security advisory at the version it names, how you checked, and each advisory you found. If the opinion names a preview feature, which belongs in a "Coming next" note, or changes a house block or region, say so.

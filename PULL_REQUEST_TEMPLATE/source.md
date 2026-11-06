@@ -1,4 +1,4 @@
-<!-- This description becomes the squash commit's message, so write it as Writing style: Commit messages and pull requests describes, and delete this comment: https://awesome-humans.net/conventions/writing-style/#commit-messages-and-pull-requests
+<!-- This description becomes the commit message. Follow Writing style: Commit messages and pull requests, then delete this comment: https://awesome-humans.net/conventions/writing-style/#commit-messages-and-pull-requests
 
      Records a `vet-source` decision. Replace the text after each label. If a section doesn't apply, write "Doesn't apply" and the reason, instead of deleting it. End with a `Closes: #<number>` trailer for the suggestion's issue, if it has one. -->
 
@@ -14,7 +14,7 @@
 
 ## Evidence per admission criterion
 
-The criteria are in the repository's `AWESOME-HUMANS.md`: Admission criteria. Link the posts each finding rests on, as reference-style links.
+The criteria are in the repository's `AWESOME-HUMANS.md`: Admission criteria. Link the posts behind each finding, as reference-style links.
 
 - **Longevity:** the finding, and its evidence.
 - **Depth:** the finding, and its evidence.
@@ -29,7 +29,7 @@ The row added to the decision log: the decision and the fact behind it, in two s
 
 ## Demotion
 
-A demotion is finished only when no opinion cites the source. For each claim that cited it, the file, and whether it was re-sourced, from which roster ID, or dropped.
+A demotion is finished only when no opinion cites the source. For each claim that cited it: the file, and the roster ID it was re-sourced from, or "dropped".
 
 ## Checked
 

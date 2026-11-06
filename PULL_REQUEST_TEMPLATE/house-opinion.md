@@ -1,4 +1,4 @@
-<!-- This description becomes the squash commit's message, so write it as Writing style: Commit messages and pull requests describes, and delete this comment: https://awesome-humans.net/conventions/writing-style/#commit-messages-and-pull-requests
+<!-- This description becomes the commit message. Follow Writing style: Commit messages and pull requests, then delete this comment: https://awesome-humans.net/conventions/writing-style/#commit-messages-and-pull-requests
 
      Records a `weave-house-opinion` run. Title the pull request `docs: weave house opinion on <title>`. Replace the text after each label. If a section doesn't apply, write "Doesn't apply" and the reason, instead of deleting it. -->
 
@@ -12,7 +12,7 @@
 
 ## Where it went
 
-Each file changed, and the section in it.
+The files and sections you changed.
 
 ## Sourced text beside it
 
