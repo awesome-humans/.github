@@ -16,7 +16,7 @@ Keep the one that applies, and delete the other two.
 
 - **Sourced:** it traces to a vetted source on the repository's `AWESOME-HUMANS.md` roster. The roster IDs, and a reference-style link to each post.
 - **Candidate source:** it traces to a source that isn't on the roster yet, which must pass `vet-source` before the opinion can merge. The source, and the evidence of its track record.
-- **Experience-based:** it comes from your own practice, with no published source. If the owner accepts it, they adopt it into their house profile and take responsibility for it, as the repository's `HOUSE-OPINIONS.md` describes, and the Woven table credits this pull request and its author.
+- **Experience-based:** it comes from your own practice, with no published source. If a profile's owner accepts it, they adopt it into their house profile and take responsibility for it, as the repository's `HOUSE-OPINIONS.md` describes, and the Woven table credits this pull request and its author.
 
 ## Skill run
 

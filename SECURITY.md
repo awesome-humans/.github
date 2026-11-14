@@ -17,4 +17,4 @@ Don't open a public issue, pull request, or discussion about it.
 
 ## What happens next
 
-The owner replies in the advisory, and fixes the problem there or in a private fork. Once the fix is merged and deployed, the advisory is published, crediting you unless you ask not to be named.
+The maintainer replies in the advisory, and fixes the problem there or in a private fork. Once the fix is merged and deployed, the advisory is published, crediting you unless you ask not to be named.
