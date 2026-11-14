@@ -24,7 +24,7 @@ A person proposing an opinion writes "Doesn't apply".
 
 **Skill:** `harvest-sources` or `resolve-research`.
 
-**`harvest-sources`:** the sweep window. For each source, the posts read and what each changed, or "nothing notable". Where vetted sources disagree, both positions and the one chosen. A `Closes: #<number>` trailer for the `Harvest due` issue.
+**`harvest-sources`:** the scan window. For each source, the posts read and what each changed, or "nothing notable". Where vetted sources disagree, both positions and the one chosen. A `Closes: #<number>` trailer for the `Harvest due` issue.
 
 **`resolve-research`:** the `research/` topic, and whether it's promoted, partly promoted, or discarded. For each claim the recommendation rests on, the roster ID behind it, or why it was dropped or held.
 
