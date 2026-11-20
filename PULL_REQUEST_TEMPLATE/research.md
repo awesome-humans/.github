@@ -1,6 +1,6 @@
 <!-- This description becomes the commit message. Follow Writing style: Commit messages and pull requests, then delete this comment: https://awesome-humans.net/conventions/writing-style/#commit-messages-and-pull-requests
 
-     Saves a `research-topic` topic. Title the pull request `research: <topic>`. Replace the text after each label. If a section doesn't apply, write "Doesn't apply" and the reason, instead of deleting it. -->
+     Saves a `stage-research` topic. Title the pull request `research: <topic>`. Replace the text after each label. If a section doesn't apply, write "Doesn't apply" and the reason, instead of deleting it. -->
 
 ## Question
 
